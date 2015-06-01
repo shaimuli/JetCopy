@@ -108,6 +108,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="images\jetcopy - Copy.png" />
+    <Content Include="icon.png" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />

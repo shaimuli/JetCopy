@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JetCopy</title>
+
+    <!-- JetCopy references -->
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Hello, your application is ready!</p>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <!--<script src="scripts/index.js"></script>
+    <script>-->
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            var ref = window.open('http://www.jetcopy.co.il/', '_self', 'location=yes');
+            ref.addEventListener('loadstart', function (event) { alert('start: ' + event.url); });
+            ref.addEventListener('loadstop', function (event) { alert('stop: ' + event.url); });
+            ref.addEventListener('loaderror', function (event) { alert('error: ' + event.message); });
+            ref.addEventListener('exit', function (event) { alert(event.type); });
+        }
+    </script>
+</body>
+</html>
